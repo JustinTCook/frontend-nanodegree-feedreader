@@ -27,20 +27,34 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
+        /* Test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+         it('contains url', function(){
+           allFeeds.forEach( function(item){
+             expect(item.url).toBeDefined();
+             expect(item.url).not.toBe('');
+           });
+         });
 
 
-        /* TODO: Write a test that loops through each feed
+        /* Test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+         it('has name', function(){
+           allFeeds.forEach( function(item){
+             expect(item.name).toBeDefined();
+             expect(item.name).not.toBe('');
+           });
+         });
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
+    describe('The menu', function(){
+
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
@@ -53,6 +67,8 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+    });
+
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
